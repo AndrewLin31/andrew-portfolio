@@ -54,6 +54,24 @@
   width: 90%;
   max-width: 100%;
 }
+
+.contacts-status {
+  min-height: 28px;
+}
+
+.contacts-status .status-success {
+  color: #2b7a2b;
+  background: #ecf8ec;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.contacts-status .status-error {
+  color: #7a2b2b;
+  background: #fdecec;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
   .contacts-right input,
   .contacts-right textarea {
     padding: 12px 16px;
