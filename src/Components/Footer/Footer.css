@@ -1,0 +1,37 @@
+/* Footer.css */
+
+.footer {
+  background-color: #361616;
+  padding: 1.5rem 0;
+  border-top: 1px solid #361616;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-name {
+  font-size: 0.95rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  font-size: 0.95rem;
+  color: #83c4e7;
+}
+
+.footer-links a {
+  color: #83c4e7;
+  text-decoration: none;
+  margin: 0 0.4rem;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

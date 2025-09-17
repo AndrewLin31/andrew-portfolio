@@ -1,0 +1,71 @@
+/* About.css */
+
+.profile-container {
+    position: relative;
+}
+
+.landscape {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 90%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 100%);
+}
+
+.greeting {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    width: 70%;
+    font-size: 110px;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    color:white;
+}
+
+.intro {
+    position: absolute;
+    top: 400px;
+    left: 40px;
+    width: 70%;
+    font-size: 40px;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+.hire-me {
+    position: absolute;
+    top: 550px;
+    left: 40px;
+    padding: 20px 40px;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    background: #3E0703;
+}
+
+.resume {
+    position: absolute;
+    top: 550px;
+    left: 350px;
+    padding: 20px 40px;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    background: #3E0703;
+}
+
+.resume:hover, .hire-me:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
