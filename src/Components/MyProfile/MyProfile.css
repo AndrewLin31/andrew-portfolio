@@ -2,70 +2,130 @@
 
 .profile-container {
     position: relative;
+    /* make the container span the full viewport width to achieve full-bleed effect */
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .landscape {
-    max-width: 100%;
+    width: 100vw; /* span the viewport */
     height: auto;
     display: block;
+    object-fit: cover;
+    object-position: center center;
+    margin: 0 auto;
+    max-height: 60vh;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 90%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 100%);
 }
 
-.greeting {
+.profile-overlay {
     position: absolute;
-    top: 200px;
-    left: 40px;
-    width: 70%;
-    font-size: 110px;
+    left: 4%;
+    right: 4%;
+    bottom: 4%;
+    max-width: 56%;
+    padding: 18px;
+    box-sizing: border-box;
+    color: white;
+    z-index: 3;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.5));
+}
+
+.greeting {
+    margin: 0 0 12px 0;
+    font-size: clamp(28px, 6vw, 110px);
     font-family: "Open Sans", sans-serif;
+    line-height: 1.02;
     text-align: left;
     color:white;
 }
 
 .intro {
-    position: absolute;
-    top: 400px;
-    left: 40px;
-    width: 70%;
-    font-size: 40px;
+    margin: 0 0 18px 0;
+    width: 100%;
+    font-size: clamp(16px, 3.2vw, 40px);
     font-family: "Open Sans", sans-serif;
     color: rgb(255, 255, 255);
     text-align: left;
 }
 
-.hire-me {
-    position: absolute;
-    top: 550px;
-    left: 40px;
-    padding: 20px 40px;
+.hire-me, .resume {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px; /* touch target */
+    padding: 12px 28px;
     border: 2px solid white;
-    border-radius: 50px;
-    font-size: 24px;
-    font-weight: 500;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     font-family: "Open Sans", sans-serif;
     color: white;
     background: #3E0703;
-}
-
-.resume {
-    position: absolute;
-    top: 550px;
-    left: 350px;
-    padding: 20px 40px;
-    border: 2px solid white;
-    border-radius: 50px;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    background: #3E0703;
+    margin-right: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .resume:hover, .hire-me:hover {
     background-color: white;
     color: black;
     transition: 0.5s;
+}
+
+/* Responsive rules: stack the content on smaller screens */
+@media (max-width: 900px) {
+    .profile-overlay {
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+        max-width: calc(100% - 10%);
+        padding: 16px;
+        background: rgba(0,0,0,0.45);
+    }
+
+    .greeting {
+        font-size: clamp(28px, 6vw, 48px);
+        text-align: center;
+        margin-top: 8px;
+        padding: 0 8px;
+    }
+
+    .intro {
+        font-size: clamp(14px, 3vw, 20px);
+        text-align: center;
+        margin: 8px 8px 0 8px;
+    }
+
+    .action-buttons { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+
+    .hire-me, .resume { padding: 12px 20px; font-size: 15px; margin: 8px 6px 0 6px; }
+
+    .landscape {
+        mask-image: none;
+        -webkit-mask-image: none;
+        max-height: 55vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .greeting {
+        font-size: clamp(22px, 8vw, 34px);
+        margin-top: 8px;
+    }
+    .intro {
+        font-size: clamp(14px, 4.5vw, 16px);
+        margin: 6px 10px 0 10px;
+    }
+    .hire-me, .resume {
+        padding: 10px 16px;
+        font-size: 15px;
+        border-radius: 40px;
+        width: 48%;
+    }
 }
