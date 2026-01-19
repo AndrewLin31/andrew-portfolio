@@ -1,8 +1,7 @@
 import logo from './Assets/profile.jpg';
 import './App.css';
 
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import PillNav from './Components/NavBar/PillNav';
 import MyProfile from './Components/MyProfile/MyProfile';
 import About from './Components/About/About';
@@ -14,13 +13,6 @@ import Resume from './Components/Resume/Resume';
 
 function App() {
   const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (location.pathname === '/') {
-      navigate('/', { replace: true });
-    }
-  }, []);
 
   return (
       <div className="App">
