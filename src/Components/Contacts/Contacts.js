@@ -36,8 +36,6 @@ const Contacts = () => {
       formData.append("email", email);
       formData.append("message", message);
       formData.append("_subject", "New message from portfolio contact form");
-      // optional: disable captcha for formsubmit if configured
-      // formData.append("_captcha", "false");
 
       const res = await fetch("https://formsubmit.co/ajax/andrewlin368682@gmail.com", {
         method: "POST",

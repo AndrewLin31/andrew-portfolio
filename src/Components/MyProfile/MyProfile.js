@@ -1,5 +1,6 @@
 import React from "react"
 import "./MyProfile.css"
+import profile from "../../Assets/profile.jpg"
 import landscape from "../../Assets/landscape.jpg"
 import { useNavigate } from "react-router-dom"
 import SplitText from "./SplitText";
@@ -16,6 +17,7 @@ const MyProfile = () => {
         <div id="home" className="profile-container">
             <img src={landscape} alt="landscape.jpg" className="landscape"/>
             <div className="profile-overlay">
+              <img src={profile} alt="profile.jpg" className="profile-image"/>
               <SplitText
                 text="Hi, I'm Andrew"
                 className="greeting"
