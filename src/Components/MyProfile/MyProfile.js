@@ -1,21 +1,17 @@
 import React from "react"
 import "./MyProfile.css"
 import landscape from "../../Assets/landscape.jpg"
+import { useNavigate } from "react-router-dom"
 import SplitText from "./SplitText";
 import ScrollReveal from "./ScrollReveal/ScrollReveal";
-
-const scrollToSection = (id) => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
 };
 
 const MyProfile = () => {
+    const navigate = useNavigate();
+
     return (
         <div id="home" className="profile-container">
             <img src={landscape} alt="landscape.jpg" className="landscape"/>
@@ -37,8 +33,8 @@ const MyProfile = () => {
               />
               <p className="intro">I'm a Software Engineer with experience in Embedded Systems development.</p>
               <div className="action-buttons">
-                  <div className="hire-me" onClick={() => scrollToSection("contact-section")}>Connect with me</div>
-                  <div className="resume" onClick={() => scrollToSection("resume-section")}>Resume</div>
+                  <div className="hire-me" onClick={() => navigate("/contact")}>Connect with me</div>
+                  <div className="resume" onClick={() => navigate("/resume")}>Resume</div>
               </div>
             </div>
         </div>

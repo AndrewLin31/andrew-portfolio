@@ -1,7 +1,8 @@
 import logo from './Assets/profile.jpg';
 import './App.css';
 
-import Navbar from './Components/NavBar/NavBar';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import PillNav from './Components/NavBar/PillNav';
 import MyProfile from './Components/MyProfile/MyProfile';
 import About from './Components/About/About';
@@ -12,18 +13,28 @@ import Resume from './Components/Resume/Resume';
 
 
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      navigate('/', { replace: true });
+    }
+  }, []);
+
   return (
       <div className="App">
         <div id="nav-section"><PillNav
         logo={logo}
         logoAlt="Company Logo"
         items={[
-          { label: 'Home', href: '#home-section' },
-          { label: 'About', href: '#about-section' },
-          { label: 'Projects', href: '#projects-section' },
-          { label: 'Resume', href: '#resume-section' }
+          { label: 'Home', href: '/' },
+          { label: 'About', href: '/about' },
+          { label: 'Projects', href: '/projects' },
+          { label: 'Resume', href: '/resume' },
+          { label: 'Contact', href: '/contact' }
         ]}
-        activeHref="/"
+        activeHref={location.pathname}
         className="custom-nav"
         ease="power2.easeOut"
         baseColor="#240808ff"
@@ -35,11 +46,13 @@ function App() {
         initialLoadAnimation
         />
         </div>
-        <div id="home-section"><MyProfile/></div>
-        <div id="about-section"><About/></div>
-        <div id="projects-section"><Projects/></div>
-        <div id="resume-section"><Resume/></div>
-        <div id="contact-section"><Contacts/></div>
+        <Routes>
+          <Route path="/" element={<MyProfile/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="/resume" element={<Resume/>} />
+          <Route path="/contact" element={<Contacts/>} />
+        </Routes>
         <Footer/>
       </div>
   );
