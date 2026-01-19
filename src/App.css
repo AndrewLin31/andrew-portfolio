@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
 .App-logo {
@@ -35,6 +38,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#nav-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+#home-section {
+  flex: none;
+  display: flex;
+  height: 100vh;
 }
 
 footer {

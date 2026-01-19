@@ -8,36 +8,37 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    height: 100%;
 }
 
 .landscape {
     width: 100vw; /* span the viewport */
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     object-position: center center;
     margin: 0 auto;
-    max-height: 60vh;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 90%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 100%);
 }
 
 .profile-overlay {
     position: absolute;
-    left: 4%;
-    right: 4%;
-    bottom: 4%;
-    max-width: 56%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
     padding: 18px;
     box-sizing: border-box;
     color: white;
     z-index: 3;
     border-radius: 12px;
     background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.5));
+    width: fit-content;
 }
 
 .greeting {
-    margin: 0 0 12px 0;
+    margin: 0 0px 12px 0;
     font-size: clamp(28px, 6vw, 110px);
     font-family: "Open Sans", sans-serif;
     line-height: 1.02;
@@ -81,8 +82,9 @@
 /* Responsive rules: stack the content on smaller screens */
 @media (max-width: 900px) {
     .profile-overlay {
-        left: 5%;
-        right: 5%;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
         bottom: 5%;
         max-width: calc(100% - 10%);
         padding: 16px;
@@ -107,9 +109,8 @@
     .hire-me, .resume { padding: 12px 20px; font-size: 15px; margin: 8px 6px 0 6px; }
 
     .landscape {
-        mask-image: none;
-        -webkit-mask-image: none;
-        max-height: 55vh;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 90%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, #7c0a19 90%);
     }
 }
 

@@ -40,13 +40,13 @@ const Navbar = () => {
         return () => observer.disconnect();
     }, []);
 
-    useEffect(() => {
-        const onResize = () => {
-            if (window.innerWidth > 900) setOpen(false);
-        };
-        window.addEventListener('resize', onResize);
-        return () => window.removeEventListener('resize', onResize);
-    }, []);
+    // useEffect(() => {
+    //     const onResize = () => {
+    //         if (window.innerWidth > 900) setOpen(false);
+    //     };
+    //     window.addEventListener('resize', onResize);
+    //     return () => window.removeEventListener('resize', onResize);
+    // }, []);
 
     return (
         <nav className={`nav-bar ${open ? 'open' : ''}`}>

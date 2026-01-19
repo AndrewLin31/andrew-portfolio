@@ -18,8 +18,9 @@ code {
 }
 
 body {
-  height: 100vh;
+  height: auto;
   background-color: #361616;
   color: white;
+  overflow-x: hidden;
 }
 
