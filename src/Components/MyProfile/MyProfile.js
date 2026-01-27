@@ -4,7 +4,6 @@ import profile from "../../Assets/profile.jpg"
 import landscape from "../../Assets/landscape.jpg"
 import { useNavigate } from "react-router-dom"
 import SplitText from "./SplitText";
-import ScrollReveal from "./ScrollReveal/ScrollReveal";
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
