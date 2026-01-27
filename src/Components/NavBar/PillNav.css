@@ -228,7 +228,7 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 50px;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
 }
 
 .mobile-menu-popover .mobile-menu-link:hover {
