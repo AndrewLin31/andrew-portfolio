@@ -93,7 +93,9 @@
         right: auto;
         transform: translateX(-50%);
         bottom: 5%;
-        max-width: calc(100% - 10%);
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        max-height: fit-content;
         padding: 16px;
         background: rgba(0,0,0,0.45);
     }
@@ -183,6 +185,7 @@
         bottom: 20px;
         width: 90%;
         max-width: 90%;
+        max-height: fit-content;
         padding: 12px;
     }
 
@@ -215,6 +218,7 @@
 
     .profile-overlay {
         max-width: 95%;
+        max-height: fit-content;
         padding: 10px;
     }
 }
