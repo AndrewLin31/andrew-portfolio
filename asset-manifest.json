@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/andrew-portfolio/static/css/main.14346dc3.css",
-    "main.js": "/andrew-portfolio/static/js/main.6edf46f7.js",
-    "static/js/453.d8c77286.chunk.js": "/andrew-portfolio/static/js/453.d8c77286.chunk.js",
-    "static/media/proj3.gif": "/andrew-portfolio/static/media/proj3.5e839f219c0bb996ec2f.gif",
-    "static/media/proj4.gif": "/andrew-portfolio/static/media/proj4.ddbd78d2d1e7585b90df.gif",
-    "static/media/landscape.jpg": "/andrew-portfolio/static/media/landscape.973cd9b2d9678d3dba04.jpg",
-    "static/media/proj1.jpg": "/andrew-portfolio/static/media/proj1.fad10c4e4f8eae4f43bb.jpg",
-    "static/media/proj2.jpg": "/andrew-portfolio/static/media/proj2.69cfe5a9c08ca35d4c13.jpg",
-    "static/media/about.jpg": "/andrew-portfolio/static/media/about.0755ae9e0ba35b29e38a.jpg",
-    "static/media/resume.pdf": "/andrew-portfolio/static/media/resume.743138a8460fefc12657.pdf",
-    "static/media/logo.svg": "/andrew-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/andrew-portfolio/index.html",
-    "main.14346dc3.css.map": "/andrew-portfolio/static/css/main.14346dc3.css.map",
-    "main.6edf46f7.js.map": "/andrew-portfolio/static/js/main.6edf46f7.js.map",
-    "453.d8c77286.chunk.js.map": "/andrew-portfolio/static/js/453.d8c77286.chunk.js.map"
+    "main.css": "/static/css/main.caca8004.css",
+    "main.js": "/static/js/main.d0aa3b02.js",
+    "static/js/453.d8c77286.chunk.js": "/static/js/453.d8c77286.chunk.js",
+    "static/media/proj3.gif": "/static/media/proj3.5e839f219c0bb996ec2f.gif",
+    "static/media/proj4.gif": "/static/media/proj4.ddbd78d2d1e7585b90df.gif",
+    "static/media/landscape.jpg": "/static/media/landscape.973cd9b2d9678d3dba04.jpg",
+    "static/media/proj1.jpg": "/static/media/proj1.fad10c4e4f8eae4f43bb.jpg",
+    "static/media/proj2.jpg": "/static/media/proj2.69cfe5a9c08ca35d4c13.jpg",
+    "static/media/about.jpg": "/static/media/about.0755ae9e0ba35b29e38a.jpg",
+    "static/media/resume.pdf": "/static/media/resume.a5b28edc0472999c93d9.pdf",
+    "index.html": "/index.html",
+    "main.caca8004.css.map": "/static/css/main.caca8004.css.map",
+    "main.d0aa3b02.js.map": "/static/js/main.d0aa3b02.js.map",
+    "453.d8c77286.chunk.js.map": "/static/js/453.d8c77286.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14346dc3.css",
-    "static/js/main.6edf46f7.js"
+    "static/css/main.caca8004.css",
+    "static/js/main.d0aa3b02.js"
   ]
 }
