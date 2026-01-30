@@ -159,8 +159,10 @@
 @media (max-width: 480px) {
     .profile-container {
         padding: 1rem 0.5rem;
-        min-height: auto;
+        min-height: 100vh;
         overflow: visible;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .greeting {
@@ -179,10 +181,9 @@
 
     .profile-overlay {
         position: absolute;
-        top: auto;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        bottom: 20px;
+        transform: translate(-50%, -50%);
         width: 90%;
         max-width: 90%;
         max-height: fit-content;
